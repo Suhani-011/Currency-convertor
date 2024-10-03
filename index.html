@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Convertor</title>
+    <!-- Remix Icon -->
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/media.css">
+</head>
+<body>
+    <div class="container flex box">
+        <div>
+            <h3 class="head">CURRENCY CONVERTOR</h3>
+        <div class="card">
+            <div class="inside-card flex">
+                <div class="convertor flex">
+                    <label for="txt1" class="country">USD</label>
+                    <input type="text" id="txt1">
+                </div>
+                <div class="swap flex">
+                    <i class="ri-arrow-left-right-line"></i>
+                </div>
+                <div class="convertor flex">
+                    <label for="txt2" class="country">INR</label>
+                    <input type="text" id="txt2">
+                </div>
+                
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+
+    <script src="./assets/javascript/jQuery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#txt1").on("input",function(){
+                $content=$(this).val();
+                $("#txt2").val($content*83.94);
+            })
+            $("#txt2").on("input",function(){
+                $content=$(this).val();
+                $("#txt1").val($content/83.94);
+            })
+
+        })
+    </script>
+</body>
+</html>
